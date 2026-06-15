@@ -11,7 +11,7 @@ import SingleTemplate from './pages/SingleTemplate';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Saad/">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
