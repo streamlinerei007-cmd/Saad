@@ -7,7 +7,7 @@ const servicesData = {
     title: 'UI/UX Design',
     subtitle: 'Human-centered UI and UX for happier users',
     description:
-      'White Solutions creates beautiful, intuitive interfaces that keep users engaged and help your business convert more visitors into customers.',
+      'WP Developer creates beautiful, intuitive interfaces that keep users engaged and help your business convert more visitors into customers.',
     features: [
       { icon: '🧠', title: 'User Research', desc: 'Understand your audience before designing anything.' },
       { icon: '📐', title: 'Wireframing', desc: 'Clear structure and navigation before visual design begins.' },

@@ -61,7 +61,7 @@ export default function Home() {
           <div className="hero-content animate-fade-up">
             <span className="section-tag">Trusted Software House</span>
             <h1 className="hero-title">
-              White Solutions builds<br />
+              WP Developer builds<br />
               <span>software</span> and digital products<br />
               for modern businesses.
             </h1>

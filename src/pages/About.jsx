@@ -21,7 +21,7 @@ export default function About() {
       <section className="page-hero">
         <div className="container">
           <span className="section-tag">Our Story</span>
-          <h1 className="section-title">About <span>White Solutions</span></h1>
+          <h1 className="section-title">About <span>WP Developer</span></h1>
           <p className="section-subtitle">
             A software house of designers, developers, and strategists crafting exceptional digital solutions for businesses.
           </p>
@@ -38,7 +38,7 @@ export default function About() {
                 Empowering Brands to<br /><span>Thrive Digitally</span>
               </h2>
               <p style={{ color: 'var(--text-muted)', lineHeight: 2, marginBottom: '20px' }}>
-                Founded in 2016, White Solutions was born from a simple belief: every business
+                Founded in 2016, WP Developer was born from a simple belief: every business
                 deserves powerful digital tools. We combine cutting-edge technology with
                 thoughtful design to deliver solutions that help companies grow and succeed.
               </p>
