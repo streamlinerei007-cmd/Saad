@@ -21,10 +21,9 @@ export default function About() {
       <section className="page-hero">
         <div className="container">
           <span className="section-tag">Our Story</span>
-          <h1 className="section-title">About <span>NexaStudio</span></h1>
+          <h1 className="section-title">About <span>White Solutions</span></h1>
           <p className="section-subtitle">
-            A passionate team of designers, developers, and strategists dedicated
-            to crafting exceptional digital experiences since 2016.
+            A software house of designers, developers, and strategists crafting exceptional digital solutions for businesses.
           </p>
         </div>
       </section>
@@ -39,10 +38,9 @@ export default function About() {
                 Empowering Brands to<br /><span>Thrive Digitally</span>
               </h2>
               <p style={{ color: 'var(--text-muted)', lineHeight: 2, marginBottom: '20px' }}>
-                Founded in 2016, NexaStudio was born from a simple belief: every business
-                deserves a world-class digital presence. We combine cutting-edge technology
-                with creative thinking to deliver solutions that don't just look great —
-                they drive real, measurable results.
+                Founded in 2016, White Solutions was born from a simple belief: every business
+                deserves powerful digital tools. We combine cutting-edge technology with
+                thoughtful design to deliver solutions that help companies grow and succeed.
               </p>
               <p style={{ color: 'var(--text-muted)', lineHeight: 2 }}>
                 Over the years we have partnered with startups and Fortune 500 companies

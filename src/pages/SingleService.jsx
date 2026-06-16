@@ -2,21 +2,69 @@ import { useParams, Link } from 'react-router-dom';
 import './Home.css';
 
 const servicesData = {
-  'web-design': {
+  'ui-ux': {
     icon: '🎨',
-    title: 'Web Design',
-    subtitle: 'Beautiful, user-centered design experiences',
+    title: 'UI/UX Design',
+    subtitle: 'Human-centered UI and UX for happier users',
     description:
-      'Our web design service combines stunning aesthetics with strategic thinking. We craft interfaces that not only look incredible but guide users seamlessly toward your business goals.',
+      'White Solutions creates beautiful, intuitive interfaces that keep users engaged and help your business convert more visitors into customers.',
     features: [
-      { icon: '🖼️', title: 'UI/UX Design', desc: 'Intuitive, beautiful interfaces designed around user behavior.' },
-      { icon: '📐', title: 'Wireframing', desc: 'Clear structural blueprints before any design work begins.' },
-      { icon: '🔲', title: 'Prototyping', desc: 'Interactive prototypes to test and validate ideas early.' },
-      { icon: '🎯', title: 'Design Systems', desc: 'Scalable, consistent design tokens and component libraries.' },
+      { icon: '🧠', title: 'User Research', desc: 'Understand your audience before designing anything.' },
+      { icon: '📐', title: 'Wireframing', desc: 'Clear structure and navigation before visual design begins.' },
+      { icon: '🎛️', title: 'Prototyping', desc: 'Interactive prototypes to validate your product early.' },
+      { icon: '🎯', title: 'Design Systems', desc: 'Reusable components that keep your experience consistent.' },
     ],
-    price: 'Starting at $2,500',
+    price: 'Starting at $2,000',
     timeline: '2–4 weeks',
     gradient: 'linear-gradient(135deg, #6c63ff 0%, #ff6584 100%)',
+  },
+  'wordpress': {
+    icon: '🧩',
+    title: 'WordPress Development',
+    subtitle: 'Custom WordPress sites and plugin solutions',
+    description:
+      'From custom themes to WooCommerce stores, we build WordPress solutions tailored to your brand and business goals.',
+    features: [
+      { icon: '🛠️', title: 'Custom Themes', desc: 'Beautiful themes built exactly how you need them.' },
+      { icon: '🔌', title: 'Plugin Integration', desc: 'Seamless third-party and custom plugin support.' },
+      { icon: '🛒', title: 'WooCommerce', desc: 'Powerful online stores that are easy to manage.' },
+      { icon: '🧾', title: 'Maintenance', desc: 'Ongoing support, updates, and performance tuning.' },
+    ],
+    price: 'Starting at $3,000',
+    timeline: '3–8 weeks',
+    gradient: 'linear-gradient(135deg, #ffb347 0%, #ffcc33 100%)',
+  },
+  'salesforce': {
+    icon: '☁️',
+    title: 'Salesforce Development',
+    subtitle: 'CRM automation, custom apps, and integrations',
+    description:
+      'Our Salesforce team builds custom Salesforce solutions that automate sales, service, and marketing workflows for better efficiency.',
+    features: [
+      { icon: '⚡', title: 'Apex & Lightning', desc: 'Custom development for Salesforce Lightning experiences.' },
+      { icon: '🔗', title: 'Integrations', desc: 'Connect Salesforce with other systems and tools.' },
+      { icon: '🤖', title: 'Automation', desc: 'Automate complex business processes and workflows.' },
+      { icon: '📊', title: 'Dashboards', desc: 'Actionable reports that help you make smarter decisions.' },
+    ],
+    price: 'Starting at $4,500',
+    timeline: '4–10 weeks',
+    gradient: 'linear-gradient(135deg, #00a1e0 0%, #0072c6 100%)',
+  },
+  'ghl': {
+    icon: '🔧',
+    title: 'GHL Development',
+    subtitle: 'GoHighLevel funnels, automations, and growth systems',
+    description:
+      'We build high-converting funnels and marketing automation inside GoHighLevel so you can capture more leads and close more sales.',
+    features: [
+      { icon: '🧩', title: 'Funnel Design', desc: 'Landing pages and funnels optimized for conversion.' },
+      { icon: '🤝', title: 'CRM Automation', desc: 'Automated workflows for follow-ups and lead nurturing.' },
+      { icon: '📚', title: 'Membership Sites', desc: 'Secure member areas for courses and exclusive content.' },
+      { icon: '✉️', title: 'Campaigns', desc: 'Email and SMS campaigns designed to convert.' },
+    ],
+    price: 'Starting at $2,800',
+    timeline: '3–6 weeks',
+    gradient: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
   },
   'development': {
     icon: '💻',

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/White-Solutions-web.webp';
 
 export default function Footer() {
   return (
@@ -6,8 +7,10 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <div className="nav-logo">NexaStudio</div>
-            <p>We craft extraordinary digital experiences that elevate brands and delight users worldwide.</p>
+            <div className="nav-logo">
+              <img src={logo} alt="White Solutions" className="site-logo site-logo-footer" />
+            </div>
+            <p>We are a software house delivering UI/UX, WordPress, Salesforce, GHL, and full-stack development solutions.</p>
           </div>
           <div className="footer-col">
             <h4>Pages</h4>
@@ -30,7 +33,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:hello@nexastudio.com">hello@nexastudio.com</a></li>
+              <li><a href="mailto:saidali2847@gmail.com">saidali2847@gmail.com</a></li>
               <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
               <li><a href="#">Twitter / X</a></li>
               <li><a href="#">LinkedIn</a></li>
@@ -38,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} NexaStudio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} White Solutions. All rights reserved.</p>
           <p>Built with ❤️ using React</p>
         </div>
       </div>

@@ -2,20 +2,53 @@ import { useState } from 'react';
 import './Home.css';
 
 export default function Contact() {
+  const SERVICE_EMAIL = 'saidali2847@gmail.com';
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState('idle');
+  const [error, setError] = useState('');
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-    setForm({ name: '', email: '', subject: '', message: '' });
+    setStatus('sending');
+    setError('');
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${SERVICE_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: 'New Message from Website Contact Form',
+          _captcha: 'false',
+          name: form.name,
+          email: form.email,
+          _replyto: form.email,
+          subject: form.subject,
+          message: form.message
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSent(true);
+      setForm({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSent(false), 4000);
+    } catch (err) {
+      setError('Unable to send message. Please try again later.');
+    } finally {
+      setStatus('idle');
+    }
   };
 
   const info = [
-    { icon: '📧', label: 'Email Us', value: 'hello@nexastudio.com' },
+    { icon: '📧', label: 'Email Us', value: SERVICE_EMAIL },
     { icon: '📞', label: 'Call Us', value: '+1 (234) 567-890' },
     { icon: '📍', label: 'Our Office', value: '123 Digital Ave, NY 10001' },
     { icon: '🕐', label: 'Working Hours', value: 'Mon–Fri, 9am – 6pm' },
@@ -66,6 +99,11 @@ export default function Contact() {
                   🎉 Message sent! We'll get back to you shortly.
                 </div>
               )}
+              {error && (
+                <div className="error-banner">
+                  ⚠️ {error}
+                </div>
+              )}
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-row">
                   <div className="form-group">
@@ -113,8 +151,13 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                  Send Message 🚀
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{ width: '100%', justifyContent: 'center' }}
+                  disabled={status === 'sending'}
+                >
+                  {status === 'sending' ? 'Sending…' : 'Send Message 🚀'}
                 </button>
               </form>
             </div>

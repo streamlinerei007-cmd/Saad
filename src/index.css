@@ -7,23 +7,23 @@
 }
 
 :root {
-  --primary: #7b61ff;
-  --primary-dark: #5a42d5;
-  --primary-light: #9d87ff;
-  --secondary: #ff4d94;
-  --accent: #43e97b;
-  --dark: #0b0b14;
-  --dark-2: #12121f;
-  --dark-3: #181829;
-  --dark-card: #141424;
-  --text-light: #f1f5f9;
-  --text-muted: #94a3b8;
+  --primary: #ff8c00;
+  --primary-dark: #e87700;
+  --primary-light: #ffb347;
+  --secondary: #ff5400;
+  --accent: #ffd166;
+  --dark: #070707;
+  --dark-2: #121212;
+  --dark-3: #191919;
+  --dark-card: #1f1f1f;
+  --text-light: #f8f5ef;
+  --text-muted: #b8b0a1;
   --white: #ffffff;
-  --gradient-1: linear-gradient(to right, #7b61ff, #ff4d94);
-  --gradient-2: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  --gradient-3: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --shadow: 0 10px 40px rgba(123, 97, 255, 0.15);
-  --shadow-lg: 0 20px 60px rgba(123, 97, 255, 0.25);
+  --gradient-1: linear-gradient(to right, #ff8c00, #ffb347);
+  --gradient-2: linear-gradient(135deg, #ff9f00 0%, #ffd166 100%);
+  --gradient-3: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
+  --shadow: 0 10px 40px rgba(255, 140, 0, 0.18);
+  --shadow-lg: 0 20px 60px rgba(255, 140, 0, 0.25);
   --radius: 16px;
   --radius-sm: 8px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,9 +68,9 @@ img {
   right: 0;
   z-index: 1000;
   padding: 16px 0;
-  background: rgba(15, 15, 26, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(108, 99, 255, 0.15);
+  background: rgba(15, 15, 26, 0.92);
+  backdrop-filter: blur(22px);
+  border-bottom: 1px solid rgba(255, 140, 0, 0.16);
   transition: var(--transition);
 }
 
@@ -81,13 +81,21 @@ img {
 }
 
 .nav-logo {
-  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-weight: 800;
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.5px;
+}
+
+.nav-logo img,
+.site-logo {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.site-logo-footer {
+  height: 38px;
 }
 
 .nav-links {
@@ -108,11 +116,12 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--white);
-  background: rgba(108, 99, 255, 0.2);
+  background: rgba(255, 140, 0, 0.16);
 }
 
 .nav-links a.active {
   color: var(--primary-light);
+  background: rgba(255, 140, 0, 0.25);
 }
 
 .nav-cta {
@@ -140,23 +149,24 @@ img {
 .btn-primary {
   background: var(--gradient-1);
   color: var(--white);
-  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.28);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 45px rgba(255, 140, 0, 0.35);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--white);
-  border: 2px solid rgba(108, 99, 255, 0.5);
+  border: 2px solid rgba(255, 140, 0, 0.35);
 }
 
 .btn-outline:hover {
-  background: rgba(108, 99, 255, 0.15);
-  border-color: var(--primary);
+  background: rgba(255, 140, 0, 0.14);
+  border-color: var(--primary-light);
+  color: var(--primary-light);
   transform: translateY(-2px);
 }
 
@@ -165,8 +175,8 @@ img {
   display: inline-block;
   padding: 6px 18px;
   border-radius: 50px;
-  background: rgba(108, 99, 255, 0.15);
-  color: var(--primary-light);
+  background: rgba(255, 140, 0, 0.12);
+  color: var(--accent);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -203,16 +213,16 @@ img {
 /* ─── CARDS ─── */
 .card {
   background: var(--dark-card);
-  border: 1px solid rgba(108, 99, 255, 0.1);
+  border: 1px solid rgba(255, 140, 0, 0.12);
   border-radius: var(--radius);
   padding: 32px;
   transition: var(--transition);
 }
 
 .card:hover {
-  border-color: rgba(108, 99, 255, 0.3);
+  border-color: rgba(255, 140, 0, 0.35);
   transform: translateY(-6px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 20px 70px rgba(255, 140, 0, 0.16);
 }
 
 /* ─── FOOTER ─── */
@@ -254,10 +264,11 @@ img {
 }
 
 .footer-col ul li a:hover {
-  color: var(--primary-light);
+  color: var(--accent);
 }
 
 .footer-bottom {
+  border-top: 1px solid rgba(255, 140, 0, 0.12);
   border-top: 1px solid rgba(108, 99, 255, 0.1);
   padding-top: 28px;
   display: flex;

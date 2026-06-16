@@ -44,9 +44,12 @@ const features = [
 ];
 
 const services = [
-  { slug: 'web-design', icon: '🎨', title: 'Web Design', desc: 'Stunning, conversion-focused designs.' },
-  { slug: 'development', icon: '💻', title: 'Development', desc: 'Scalable, modern web applications.' },
-  { slug: 'branding', icon: '✨', title: 'Branding', desc: 'Memorable brand identity systems.' },
+  { slug: 'ui-ux', icon: '🎨', title: 'UI/UX Design', desc: 'Human-centered interfaces that delight users.' },
+  { slug: 'wordpress', icon: '🧩', title: 'WordPress Development', desc: 'Custom WordPress sites, themes, and plugins.' },
+  { slug: 'salesforce', icon: '☁️', title: 'Salesforce Development', desc: 'Salesforce customizations, automation and integrations.' },
+  { slug: 'ghl', icon: '🔧', title: 'GHL Development', desc: 'GoHighLevel funnels, CRM automations, and campaigns.' },
+  { slug: 'development', icon: '💻', title: 'Web Development', desc: 'Modern web applications built for growth.' },
+  { slug: 'web-design', icon: '✨', title: 'Creative Design', desc: 'Visual identities and product design that convert.' },
 ];
 
 export default function Home() {
@@ -56,14 +59,15 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-inner">
           <div className="hero-content animate-fade-up">
-            <span className="section-tag">🌟 Award Winning Agency</span>
+            <span className="section-tag">Trusted Software House</span>
             <h1 className="hero-title">
-              We Build <span>Digital</span><br />Experiences That<br />
-              <span>Matter</span>
+              White Solutions builds<br />
+              <span>software</span> and digital products<br />
+              for modern businesses.
             </h1>
             <p className="hero-desc">
-              From concept to launch — we design and develop world-class websites,
-              apps, and brands that drive real business growth.
+              We deliver UI/UX, WordPress, Salesforce, GHL, and full-stack development services
+              to help your company grow with powerful digital solutions.
             </p>
             <div className="hero-actions">
               <Link to="/services" className="btn btn-primary">Explore Services &rarr;</Link>
