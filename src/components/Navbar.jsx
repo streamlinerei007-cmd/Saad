@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/White-Solutions-web.webp';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +8,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container">
         <NavLink to="/" className="nav-logo" onClick={() => setIsOpen(false)}>
-          <img src={logo} alt="White Solutions" className="site-logo" />
+          <span className="brand-text">WP Developer</span>
         </NavLink>
         
         <div className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>

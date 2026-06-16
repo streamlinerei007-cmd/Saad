@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/White-Solutions-web.webp';
 
 export default function Footer() {
   return (
@@ -8,7 +7,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="nav-logo">
-              <img src={logo} alt="White Solutions" className="site-logo site-logo-footer" />
+              <span className="brand-text">WP Developer</span>
             </div>
             <p>We are a software house delivering UI/UX, WordPress, Salesforce, GHL, and full-stack development solutions.</p>
           </div>
@@ -41,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} White Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} WP Developer. All rights reserved.</p>
           <p>Built with ❤️ using React</p>
         </div>
       </div>
